@@ -49,3 +49,16 @@ FROM `departments`;
 SELECT COUNT(`id`) AS `no_phone_number`
 FROM `teachers`
 WHERE `phone` IS NULL;
+
+
+9.Inserire nella tabella degli studenti un nuovo record con i propri dati (per il campo
+degree_id, inserire un valore casuale)
+INSERT INTO `students` (`id`, `degree_id`, `name`, `surname`, `date_of_birth`, `fiscal_code`, `enrolment_date`, `registration_number`, `email`)
+VALUES (5001, 3, "Simone", "Allocca", "25-08-1998", "11111111111" "14-02-2024", 23, "simone@gmail.com");
+***(mi da errore)***
+
+10.Cambiare il numero dell’ufficio del professor Pietro Rizzo in 126
+UPDATE `teachers`
+SET `office_number` = 126
+WHERE `name` = "Pietro"
+AND `surname`= "Rizzo";
